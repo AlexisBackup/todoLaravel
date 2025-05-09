@@ -6,6 +6,7 @@ use App\Http\Requests\TaskRequest;
 use App\Models\Task;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
 
 class TaskController extends Controller
@@ -52,5 +53,12 @@ class TaskController extends Controller
         $task->update($request->validated());
 
         return redirect()->route('tasks.show', ['task' => $task->id])->with('success', 'Task updated successfully !');
+    }
+
+    public function delete(Task $task): RedirectResponse
+    {
+        $task->delete();
+
+        return redirect()->route('tasks.index')->with('success', 'Task deleted successfully!');
     }
 }
