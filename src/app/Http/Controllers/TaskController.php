@@ -13,7 +13,7 @@ class TaskController extends Controller
 {
     public function getAll(): View
     {
-        return view('index')->with('tasks', Task::latest()->get());
+        return view('index')->with('tasks', Task::latest()->paginate());
     }
 
     public function getById(Task $task): View
@@ -60,5 +60,11 @@ class TaskController extends Controller
         $task->delete();
 
         return redirect()->route('tasks.index')->with('success', 'Task deleted successfully!');
+    }
+
+    public function toggle(Task $task)
+    {
+        $task->toggleComplete();
+        return redirect()->back()->with('success', 'Task updated successfully!');
     }
 }

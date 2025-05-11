@@ -22,3 +22,5 @@ Route::get('/tasks/{task}/edit', [TaskController::class, 'editShow'])->name('tas
 Route::put('/tasks/{task}', [TaskController::class, 'editHandle'])->name('tasks.edit.handle');
 
 Route::delete('/tasks/{task}', [TaskController::class, 'delete'])->name('tasks.destroy');
+
+Route::put('tasks/{task}/toggle-complete', [TaskController::class, 'toggle'])->name('tasks.toggle-complete');
