@@ -6,7 +6,6 @@ Une application simple de gestion de tâches (To-do list) développée avec **La
 
 ## 🚀 Fonctionnalités
 
-- Authentification (connexion / inscription)
 - CRUD complet des tâches
 - Statut des tâches (à faire / terminée)
 - Interface responsive avec Tailwind CSS
@@ -156,5 +155,5 @@ php artisan view:clear
 
 ## 👨‍💻 Auteur
 
-Développé par [Ton Nom](https://github.com/ton-utilisateur) – 2025  
+Développé par [Alexis](https://github.com/ton-utilisateur) – 2025  
 Licence : MIT – libre d’utilisation et de modification.
