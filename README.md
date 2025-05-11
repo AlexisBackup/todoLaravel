@@ -156,5 +156,5 @@ php artisan view:clear
 
 ## 👨‍💻 Auteur
 
-Développé par [Ton Nom](https://github.com/ton-utilisateur) – 2025  
+Développé par [Alexis](https://github.com/ton-utilisateur) – 2025  
 Licence : MIT – libre d’utilisation et de modification.
